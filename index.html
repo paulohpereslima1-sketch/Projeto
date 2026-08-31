@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico - Agendamento de Exames</title>
+</head>
+<body>
+
+    <!-- 1. Cabeçudo -->
+    <header>
+        <h1>Centro Médico Diagnósticos</h1>
+        <nav>
+            <ul>
+                <li><a href="#instrucoes">Instruções de Preparo</a></li>
+                <li><a href="#agendamento">Agendar Exame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. Main -->
+    <main>
+        
+        <!-- 2.1 Primeira Seção com h2 -->
+        <section id="instrucoes">
+            <h2>Instruções e Preparo Pré-Exame</h2>
+            <p>Antes de realizar seu exame, consulte os requisitos de jejum e recomendações específicas com nossa equipe.</p>
+        </section>
+        <!-- 2.2 Segunda Seção com h2-->
+        <section id="agendamento">
+            <h2>Solicitação de Agendamento de Exame</h2>
+            
+            <form action="#" method="POST">
+                <!-- 2.3 Fieldset e Legend -->
+                <fieldset>
+                    <legend>Dados do Paciente e do Exame</legend>
+
+                    <!-- 3. Campo 1: Nome do catimbó -->
+                    <div>
+                        <label for="nome-paciente">Nome Completo do Paciente:</label>
+                        <input type="text" id="nome-paciente" name="nome-paciente" required>
+                    </div>
+
+                    <!-- 3. Campo 2: CPF do caba-->
+                    <div>
+                        <label for="cpf">CPF (somente números):</label>
+                        <!-- 5. Campo semanticamente correto para números com padrão/tamanho fixo[cite: 1] -->
+                        <input type="tel" id="cpf" name="cpf" pattern="[0-9]{11}" placeholder="12345678900" required>
+                    </div>
+
+                    <!-- 3. Campo 3: E-mail do zé-->
+                    <div>
+                        <label for="email-paciente">E-mail para Confirmação:</label>
+                        <input type="email" id="email-paciente" name="email-paciente" required>
+                    </div>
+
+                    <!-- 3. Campo 4: Data do Exame do doente adoecido-->
+                    <div>
+                        <label for="data-exame">Data Pretendida para o Exame:</label>
+                        <input type="date" id="data-exame" name="data-exame" min="2026-09-01" max="2026-12-31">
+                    </div>
+
+                    <!-- Desafio Extra-->
+                    <div>
+                        <label for="tipo-exame">Tipo de Exame:</label>
+                        <select id="tipo-exame" name="tipo-exame" required>
+                            <option value="">Selecione um exame...</option>
+                            <option value="sangue">Hemograma Completo</option>
+                            <option value="raio-x">Raio-X de Tórax</option>
+                            <option value="ultrassom">Ultrassonografia Abdominal</option>
+                            <option value="ressonancia">Ressonância Magnética</option>
+                            <option value="tomografia">Tomografia Computadorizada</option>
+                        </select>
+                    </div>
+
+                    <!-- Desafio Extra 2-->
+                    <div>
+                        <p>Tipo de Atendimento:</p>
+                        
+                        <input type="radio" id="convenio" name="tipo-atendimento" value="convenio" checked>
+                        <label for="convenio">Plano / Convênio Médico</label>
+
+                        <input type="radio" id="particular" name="tipo-atendimento" value="particular">
+                        <label for="particular">Particular</label>
+                    </div>
+
+                </fieldset>
+
+                <!-- 4. Botão semântico de apertar com o dedo-->
+                <button type="submit">Solicitar Agendamento</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 5. Rodapé que roda (gira gira gira girante)-->
+    <footer>
+        <p>&copy; 2026 Centro Médico Diagnósticos - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
